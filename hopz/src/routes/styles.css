@@ -1,10 +1,11 @@
 @import '@fontsource/fira-mono';
 
 :root {
-	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+	--font-body: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 	--color-bg-0: rgb(242, 235, 201);
+  --color-box-bg: rgba(242, 235, 201, 0.9);
   /* --color-bg-0: rgb(217, 147, 17); */
 	--color-bg-1: rgb(217, 147, 17);
 	--color-bg-2: rgb(217, 130, 24);
@@ -52,7 +53,7 @@ a:hover {
 
 h1 {
 	font-size: 2rem;
-	text-align: center;
+	text-align: left;
 }
 
 h2 {
@@ -65,7 +66,7 @@ pre {
 	background-color: rgba(255, 255, 255, 0.45);
 	border-radius: 3px;
 	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
+	padding: 0;
 	overflow-x: auto;
 	color: var(--color-text);
 }
@@ -74,7 +75,7 @@ pre {
 	display: flex;
 	max-width: 48rem;
 	flex: 0.6;
-	flex-direction: column;
+	/* flex-direction: column; */
 	justify-content: center;
 	margin: 0 auto;
 }
@@ -105,4 +106,61 @@ button:focus:not(:focus-visible) {
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+}
+
+.box {
+  background-color: var(--color-box-bg);
+  border-radius: .25em;
+  border-color: var(--color-theme-2);
+  border-style: solid 2px;
+  padding: 0em;
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.nopad {
+  padding: 0;
+}
+
+.row {
+  flex: 1;
+
+  display: flex;
+  flex-direction: row;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+
+form label {
+  margin: 0em 0;
+  flex: 1;
+  width: 100%;
+}
+
+form input {
+  flex: 1;
+  margin: 0.5em 1em .5em 0;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  border: 1px solid var(--color-theme-2);
+}
+
+form button {
+  flex: 1;
+  margin: 0.5em 1em .5em 0;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  border: 1px solid var(--color-theme-2);
+  color: var(--color-theme-1);
+  background-color: #D99311;
+}
+
+form button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
